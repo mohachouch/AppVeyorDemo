@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>AppVeyorDemo</id>
+    <version>$version$</version>
+    <title>AppVeyor Demo</title>
+    <authors>Mohamed CHOUCHANE</authors>
+    <owners>Mohamed CHOUCHANE</owners>
+    <licenseUrl>https://github.com/mohachouch/WpfLightToolkit/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/mohachouch/WpfLightToolkit</projectUrl>    
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>AppVeyorDemo</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2017 Mohamed CHOUCHANE</copyright>
+    <tags>WPF XAML</tags>
+  </metadata>
+  <files>
+    <file src="AppVeyorDemo\bin\Release\AppVeyorDemo.dll" target="lib\net45" />
+  </files>    
+</package>
