@@ -32,4 +32,4 @@
       - provider: NuGet
         server: https://www.myget.org/F/mohachouch/api/v2/package
         api_key:
-          secure: 7f7fa964-ed7f-4e18-8452-fdc067175cfe
+          secure: O+1koezSt13pOeCKm7428lA1KFskCMzGG/+p80faYdQU6otzJCh0Q0jCx0nJU3bL
