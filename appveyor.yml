@@ -17,9 +17,15 @@
     verbosity: minimal
   before_build: 
   - ps: >- 
-      $version = "1.0.0-ci";
-      $build = [int]::Parse($env:appveyor_build_number).ToString().PadLeft(4, '0');
-      Update-AppveyorBuild -Version "$version$build";
+      if ($env:APPVEYOR_REPO_TAG -eq $TRUE) 
+      { 
+          Update-AppveyorBuild -Version "$env:APPVEYOR_REPO_TAG_NAME"
+      }else{
+          $version = "1.0.0-ci";
+          $build = [int]::Parse($env:appveyor_build_number).ToString().PadLeft(4, '0');
+          Update-AppveyorBuild -Version "$version$build";
+      }
+      
   after_build:
   - ps: nuget pack AppVeyorDemo.nuspec -Version $env:APPVEYOR_BUILD_VERSION
   artifacts:
