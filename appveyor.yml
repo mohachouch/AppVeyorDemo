@@ -32,5 +32,4 @@
       - provider: NuGet
         server: https://www.myget.org/F/mohachouch/api/v2/package
         api_key:
-          secure: 898d6826-69db-4368-b138-9ca91529970b
-        skip_symbols: true
+          secure: 7f7fa964-ed7f-4e18-8452-fdc067175cfe
