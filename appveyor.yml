@@ -3,8 +3,7 @@
   branches:
     only:
       - master
-
-  version: 1.0.0-ci{build}
+      
   os: Visual Studio 2017
   configuration: Release
   assembly_info:
@@ -16,6 +15,11 @@
   build:
     project: AppVeyorDemo.sln
     verbosity: minimal
+  before_build: 
+  - ps: >- 
+      $version = "1.0.0-ci";
+      $build = [int]::Parse($env:appveyor_build_number).ToString().PadLeft(4, '0');
+      Update-AppveyorBuild -Version "$version$build";
   after_build:
   - ps: nuget pack AppVeyorDemo.nuspec -Version $env:APPVEYOR_BUILD_VERSION
   artifacts:
