@@ -1,9 +1,5 @@
 # configuration for master/CI branch
 -
-  branches:
-    only:
-      - master
-      
   os: Visual Studio 2017
   configuration: Release
   assembly_info:
